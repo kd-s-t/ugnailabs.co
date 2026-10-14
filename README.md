@@ -1,21 +1,11 @@
+<p align="center">
+  <img src="public/ugnai-labs.png" alt="UgnAI Labs" width="220" />
+</p>
+
 # UgnAI Labs Co.
 
-Company site for [UgnAI Labs](https://ugnailabs.co): software that connects people, places, and decisions.
+Software that connects people, places, and decisions.
 
-## Stack
+UgnAI Labs Co. builds and ships products for ops, payments, hospitality, and creative work from Cebu to the world. We deliver across web, mobile, blockchain, AI, AR, IoT, and QA, and run a lab of prototypes that may become full products.
 
-- Next.js
-- TypeScript
-- Tailwind CSS
-- shadcn/ui
-- Framer Motion
-- Lucide
-
-## Develop
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3023](http://localhost:3023).
+Site: [ugnailabs.co](https://ugnailabs.co)
