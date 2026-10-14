@@ -309,7 +309,7 @@ export function HomePage() {
               Lab
             </p>
             <h2 className="mt-3 max-w-xl font-[family-name:var(--font-display)] text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold tracking-tight text-brand-ink">
-              Work still cooking.
+              Still cooking...
             </h2>
             <p className="mt-4 max-w-lg text-base leading-relaxed text-muted-foreground">
               Research builds and prototypes we explore before they become full
@@ -433,16 +433,20 @@ export function HomePage() {
           <p className="mt-4 text-xs text-white/55">
             ©2026 UgnAI Labs Co. All rights reserved.
           </p>
-          <p className="mt-2 text-[11px] text-white/40">
-            <a
-              href="/dti-certificate-demo.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="underline decoration-white/25 underline-offset-2 transition hover:text-white/70 hover:decoration-white/50"
-            >
-              DTI Certificate of Business Name Registration
-            </a>
-          </p>
+          <a
+            href="/dti-certificate-demo.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-5 inline-flex opacity-90 transition hover:opacity-100"
+          >
+            <Image
+              src="/dti-logo.png"
+              alt="DTI Certificate of Business Name Registration"
+              width={180}
+              height={79}
+              className="h-9 w-auto object-contain sm:h-10"
+            />
+          </a>
           <nav
             aria-label="Footer"
             className="mt-8 flex flex-wrap items-center justify-center gap-2"
@@ -452,28 +456,13 @@ export function HomePage() {
               { href: "#products", label: "Products" },
               { href: "#lab", label: "Lab" },
               { href: "#crew", label: "Crew" },
-              {
-                href: "https://luwasph.com/privacy",
-                label: "Privacy",
-                external: true,
-              },
-              {
-                href: "https://luwasph.com/terms",
-                label: "Terms",
-                external: true,
-              },
+              { href: "/privacy", label: "Privacy" },
+              { href: "/terms", label: "Terms" },
             ].map((item) => (
               <Button
                 key={item.label}
                 nativeButton={false}
-                render={
-                  <a
-                    href={item.href}
-                    {...("external" in item && item.external
-                      ? { target: "_blank", rel: "noreferrer" }
-                      : {})}
-                  />
-                }
+                render={<a href={item.href} />}
                 variant="ghost"
                 size="sm"
                 className="rounded-md text-white/65 hover:bg-white/10 hover:text-white"

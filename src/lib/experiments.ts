@@ -7,6 +7,8 @@ export const experiments: Product[] = [
     blurb:
       "Local chat and video on Apple Silicon. Ollama and Wan2.1, no cloud after models download.",
     image: "/products/offline-ai-mark.png",
+    comingSoon: true,
+    statusLabel: "Paused",
     platforms: ["web", "ai"],
   },
   {
@@ -15,6 +17,8 @@ export const experiments: Product[] = [
     blurb:
       "EEG brainwave control for drones and robots. Train patterns, bind actions, fly with thought.",
     image: "/products/neuropilot-mark.png",
+    comingSoon: true,
+    statusLabel: "Paused",
     platforms: ["web", "ios", "android", "ai"],
   },
   {
@@ -45,6 +49,8 @@ export const experiments: Product[] = [
     href: "https://www.npmjs.com/package/stateful-ai-video",
     image: "/products/stateful-ai-video-logo.png",
     platforms: ["ai"],
+    comingSoon: true,
+    statusLabel: "Paused",
   },
   {
     name: "Hackles",
@@ -54,6 +60,8 @@ export const experiments: Product[] = [
     href: "https://github.com/kd-s-t/hackles",
     image: "/products/hackles-logo.png",
     platforms: ["ios"],
+    comingSoon: true,
+    statusLabel: "Paused",
   },
   {
     name: "Panimalay",
@@ -62,6 +70,7 @@ export const experiments: Product[] = [
       "Condo and HOA portal for residents and officers. First community: Belize North, Consolacion.",
     image: "/products/panimalay-logo.png",
     comingSoon: true,
+    statusLabel: "Paused",
     platforms: ["web"],
   },
   {
@@ -70,6 +79,7 @@ export const experiments: Product[] = [
     blurb:
       "SYSTEM quest HUD over live video. Voice add/done commands and offline burned overlays.",
     comingSoon: true,
+    statusLabel: "Paused",
     platforms: ["ar"],
   },
   {
