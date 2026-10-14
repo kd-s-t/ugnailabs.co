@@ -1,80 +1,121 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #f4f7f9;
+  --background: #eef3f6;
   --foreground: #12161c;
-  --muted: #5c6672;
-  --line: rgba(18, 22, 28, 0.1);
-  --surface: rgba(255, 255, 255, 0.72);
   --brand-blue: #1a4fd6;
   --brand-teal: #1ec8b0;
-  --brand-ink: #1a1f27;
-  --hero-veil: linear-gradient(
-    160deg,
-    rgba(244, 247, 249, 0.92) 0%,
-    rgba(232, 242, 246, 0.78) 42%,
-    rgba(210, 236, 234, 0.7) 100%
-  );
+  --brand-ink: #12161c;
+  --luwas-red: #c72929;
+  --luwas-red-dim: #9e1a1a;
+  --line: rgba(18, 22, 28, 0.1);
   --mesh: radial-gradient(
-      120% 80% at 12% 18%,
-      rgba(26, 79, 214, 0.16),
+      90% 70% at 8% 12%,
+      rgba(26, 79, 214, 0.18),
       transparent 55%
     ),
     radial-gradient(
-      90% 70% at 88% 12%,
-      rgba(30, 200, 176, 0.18),
-      transparent 50%
+      80% 60% at 92% 18%,
+      rgba(30, 200, 176, 0.2),
+      transparent 52%
     ),
     radial-gradient(
-      70% 60% at 70% 88%,
+      70% 50% at 70% 90%,
       rgba(26, 79, 214, 0.08),
       transparent 55%
     );
+  --card: #ffffff;
+  --card-foreground: #12161c;
+  --popover: #ffffff;
+  --popover-foreground: #12161c;
+  --primary: #12161c;
+  --primary-foreground: #f7fafb;
+  --secondary: #e2e9ef;
+  --secondary-foreground: #12161c;
+  --muted: #e2e9ef;
+  --muted-foreground: #5a6470;
+  --accent: #d8f4ee;
+  --accent-foreground: #0f4a42;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: rgba(18, 22, 28, 0.1);
+  --input: rgba(18, 22, 28, 0.12);
+  --ring: #1a4fd6;
+  --chart-1: #1a4fd6;
+  --chart-2: #1ec8b0;
+  --chart-3: #5a6470;
+  --chart-4: #12161c;
+  --chart-5: #88a0b8;
+  --radius: 0.4rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #12161c;
+  --sidebar-primary: #1a4fd6;
+  --sidebar-primary-foreground: #f7fafb;
+  --sidebar-accent: #e2e9ef;
+  --sidebar-accent-foreground: #12161c;
+  --sidebar-border: rgba(18, 22, 28, 0.1);
+  --sidebar-ring: #1a4fd6;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-line: var(--line);
   --color-brand-blue: var(--brand-blue);
   --color-brand-teal: var(--brand-teal);
+  --color-brand-ink: var(--brand-ink);
+  --color-luwas-red: var(--luwas-red);
+  --color-luwas-red-dim: var(--luwas-red-dim);
+  --color-line: var(--line);
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
+  --font-heading: var(--font-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-body), sans-serif;
-}
-
 ::selection {
   background: rgba(30, 200, 176, 0.28);
-}
-
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes drift {
-  from {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  to {
-    transform: translate3d(0, -2.5%, 0) scale(1.04);
-  }
 }
 
 @keyframes sheen {
@@ -86,24 +127,16 @@ body {
   }
 }
 
-.animate-rise {
-  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-.animate-rise-delay-1 {
-  animation-delay: 0.12s;
-}
-
-.animate-rise-delay-2 {
-  animation-delay: 0.24s;
-}
-
-.animate-rise-delay-3 {
-  animation-delay: 0.36s;
-}
-
-.hero-photo {
-  animation: drift 22s ease-in-out infinite alternate;
+@keyframes pulse-line {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scaleX(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
 }
 
 .brand-sheen {
@@ -111,14 +144,37 @@ body {
   animation: sheen 8s ease-in-out infinite alternate;
 }
 
+.accent-line {
+  transform-origin: left center;
+  animation: pulse-line 4.5s ease-in-out infinite;
+}
+
+.site-grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  .animate-rise,
-  .hero-photo,
-  .brand-sheen {
+  .brand-sheen,
+  .accent-line {
     animation: none;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
   }
 }

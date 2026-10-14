@@ -19,8 +19,3 @@ npm run dev
 ```
 
 Open [http://localhost:3023](http://localhost:3023).
-
-## Contact
-
-- Email: [kendantinio@gmail.com](mailto:kendantinio@gmail.com)
-- LinkedIn: [linkedin.com/in/kdst](https://www.linkedin.com/in/kdst/)
