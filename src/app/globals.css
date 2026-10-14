@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4f7f9;
+  --foreground: #12161c;
+  --muted: #5c6672;
+  --line: rgba(18, 22, 28, 0.1);
+  --surface: rgba(255, 255, 255, 0.72);
+  --brand-blue: #1a4fd6;
+  --brand-teal: #1ec8b0;
+  --brand-ink: #1a1f27;
+  --hero-veil: linear-gradient(
+    160deg,
+    rgba(244, 247, 249, 0.92) 0%,
+    rgba(232, 242, 246, 0.78) 42%,
+    rgba(210, 236, 234, 0.7) 100%
+  );
+  --mesh: radial-gradient(
+      120% 80% at 12% 18%,
+      rgba(26, 79, 214, 0.16),
+      transparent 55%
+    ),
+    radial-gradient(
+      90% 70% at 88% 12%,
+      rgba(30, 200, 176, 0.18),
+      transparent 50%
+    ),
+    radial-gradient(
+      70% 60% at 70% 88%,
+      rgba(26, 79, 214, 0.08),
+      transparent 55%
+    );
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-teal: var(--brand-teal);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
+}
+
+::selection {
+  background: rgba(30, 200, 176, 0.28);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(0, -2.5%, 0) scale(1.04);
+  }
+}
+
+@keyframes sheen {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-rise {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-rise-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.animate-rise-delay-2 {
+  animation-delay: 0.24s;
+}
+
+.animate-rise-delay-3 {
+  animation-delay: 0.36s;
+}
+
+.hero-photo {
+  animation: drift 22s ease-in-out infinite alternate;
+}
+
+.brand-sheen {
+  background-size: 200% 200%;
+  animation: sheen 8s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-rise,
+  .hero-photo,
+  .brand-sheen {
+    animation: none;
+  }
 }
