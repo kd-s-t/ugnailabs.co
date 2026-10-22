@@ -52,7 +52,7 @@ export function ProductList({ items }: ProductListProps) {
                   >
                     {product.statusLabel ?? "Coming soon"}
                   </Badge>
-                ) : product.href ? (
+                ) : product.href && product.live !== false ? (
                   <Badge
                     variant="secondary"
                     className={cn(

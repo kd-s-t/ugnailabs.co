@@ -10,6 +10,8 @@ export type Product = {
   comingSoon?: boolean;
   /** Badge text when comingSoon (default: Coming soon). */
   statusLabel?: string;
+  /** Linked rows show Live unless this is false. */
+  live?: boolean;
   tag: string;
   /** Acronym expansion shown under the name. */
   meaning?: string;

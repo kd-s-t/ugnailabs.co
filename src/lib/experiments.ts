@@ -7,6 +7,7 @@ export const experiments: Product[] = [
     blurb:
       "AI trainer powered by Yolo26. Upload a dataset, train a model, and test it.",
     href: "https://black-locust-zvjh.vercel.app/",
+    live: false,
     image: "/products/blacklocust-logo.png",
     platforms: ["web", "ai"],
   },

@@ -386,31 +386,41 @@ export function HomePage() {
                       <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold text-brand-ink">
                         {person.name}
                       </h3>
-                      {person.showSocial ? (
+                      {person.showSocial || person.linkedin ? (
                         <span className="inline-flex items-center gap-2.5">
-                          {socialLinks.map((link) => {
-                            const Icon = socialIcon[link.label];
-                            return (
-                              <a
-                                key={link.label}
-                                href={link.href}
-                                target="_blank"
-                                rel="noreferrer"
-                                aria-label={link.label}
-                                className="inline-flex text-muted-foreground transition hover:text-brand-ink"
-                              >
-                                <Icon className="size-4" />
-                              </a>
-                            );
-                          })}
+                          {person.showSocial
+                            ? socialLinks.map((link) => {
+                                const Icon = socialIcon[link.label];
+                                return (
+                                  <a
+                                    key={link.label}
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    aria-label={link.label}
+                                    className="inline-flex text-muted-foreground transition hover:text-brand-ink"
+                                  >
+                                    <Icon className="size-4" />
+                                  </a>
+                                );
+                              })
+                            : null}
+                          {person.linkedin ? (
+                            <a
+                              href={person.linkedin}
+                              target="_blank"
+                              rel="noreferrer"
+                              aria-label="LinkedIn"
+                              className="inline-flex text-muted-foreground transition hover:text-brand-ink"
+                            >
+                              <LinkedInIcon className="size-4" />
+                            </a>
+                          ) : null}
                         </span>
                       ) : null}
                     </div>
                     <p className="mt-0.5 text-sm text-muted-foreground">
                       {person.role}
-                    </p>
-                    <p className="mt-1 text-[11px] font-medium tracking-[0.16em] text-brand-blue/80 uppercase">
-                      {person.focus}
                     </p>
                     <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                       {person.blurb}
