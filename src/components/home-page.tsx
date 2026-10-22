@@ -222,7 +222,7 @@ export function HomePage() {
               What we build with you.
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/60">
-              Full-stack delivery across web, mobile, chain, AI, AR, IoT, and QA.
+              Full-stack delivery across web, mobile, chain, AI, AR, IoT, EEG, and QA.
             </p>
           </motion.div>
 
@@ -244,11 +244,24 @@ export function HomePage() {
                 >
                   <Card className="h-full rounded-2xl border-0 bg-[#151b24] py-8 text-center text-white ring-1 ring-white/10 transition hover:ring-brand-teal/40">
                     <CardContent className="flex flex-col items-center gap-3 px-4 sm:gap-4">
-                      <span className="flex size-14 items-center justify-center rounded-full bg-gradient-to-br from-brand-blue/25 to-brand-teal/25 ring-1 ring-brand-teal/30">
-                        <Icon
-                          className="size-6 text-brand-teal"
-                          strokeWidth={1.75}
-                        />
+                      <span className="flex size-14 items-center justify-center gap-1 rounded-full bg-gradient-to-br from-brand-blue/25 to-brand-teal/25 ring-1 ring-brand-teal/30">
+                        {service.icons ? (
+                          service.icons.map((ServiceIcon, i) => (
+                            <ServiceIcon
+                              key={i}
+                              className={
+                                service.icons!.length === 1
+                                  ? "size-6 text-brand-teal"
+                                  : "size-5 text-brand-teal"
+                              }
+                            />
+                          ))
+                        ) : Icon ? (
+                          <Icon
+                            className="size-6 text-brand-teal"
+                            strokeWidth={1.75}
+                          />
+                        ) : null}
                       </span>
                       <span className="font-[family-name:var(--font-display)] text-base font-semibold tracking-tight sm:text-lg">
                         {service.name}

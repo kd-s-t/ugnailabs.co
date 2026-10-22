@@ -20,7 +20,7 @@ export default function PrivacyPage() {
           policy covers ugnailabs.co and contact flows on this site.
         </p>
         <p>
-          Individual products (for example SplitSafe, X Court Cebu, or L.U.W.A.S)
+          Individual products (for example SplitSafe, X Court Cebu, or UgnAI)
           may publish their own privacy notices. Where those notices differ, the
           product policy applies to that product.
         </p>

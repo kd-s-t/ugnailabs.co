@@ -13,7 +13,7 @@ export type Product = {
   tag: string;
   /** Acronym expansion shown under the name. */
   meaning?: string;
-  /** Tailwind-friendly accent for mark / hover (e.g. L.U.W.A.S red). */
+  /** Tailwind-friendly accent for mark / hover (e.g. UgnAI red). */
   accent?: "red" | "brand";
   /** Registered / active users. */
   users?: number;
@@ -56,12 +56,11 @@ export const products: Product[] = [
     platforms: ["ios", "android", "web", "ai"],
   },
   {
-    name: "L.U.W.A.S",
+    name: "UgnAI",
     tag: "DRRM",
-    meaning: "Logistics & Unified Workflow for Aid & Safety",
     blurb:
       "Command for barangays and LGUs: field reports, AI triage, and live situation maps.",
-    href: "https://luwasph.com",
+    href: "https://ugnaiph.com",
     accent: "red",
     comingSoon: true,
     statusLabel: "Currently in hackathon",

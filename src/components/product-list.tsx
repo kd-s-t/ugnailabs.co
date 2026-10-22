@@ -31,7 +31,7 @@ export function ProductList({ items }: ProductListProps) {
                   className={cn(
                     "font-[family-name:var(--font-display)] text-lg font-semibold transition sm:text-xl",
                     product.accent === "red"
-                      ? "text-luwas-red group-hover:text-luwas-red-dim"
+                      ? "text-ugnai-red group-hover:text-ugnai-red-dim"
                       : "text-brand-ink group-hover:text-brand-blue",
                   )}
                 >
@@ -46,7 +46,7 @@ export function ProductList({ items }: ProductListProps) {
                     className={cn(
                       "rounded-md",
                       product.accent === "red"
-                        ? "bg-luwas-red/12 text-luwas-red-dim"
+                        ? "bg-ugnai-red/12 text-ugnai-red-dim"
                         : "bg-accent text-accent-foreground",
                     )}
                   >
@@ -58,7 +58,7 @@ export function ProductList({ items }: ProductListProps) {
                     className={cn(
                       "rounded-md",
                       product.accent === "red"
-                        ? "bg-luwas-red/12 text-luwas-red-dim"
+                        ? "bg-ugnai-red/12 text-ugnai-red-dim"
                         : "bg-brand-teal/15 text-brand-ink",
                     )}
                   >
@@ -78,7 +78,7 @@ export function ProductList({ items }: ProductListProps) {
                   className={cn(
                     "mt-1 text-xs font-medium tracking-wide sm:text-[13px]",
                     product.accent === "red"
-                      ? "text-luwas-red/80"
+                      ? "text-ugnai-red/80"
                       : "text-muted-foreground",
                   )}
                 >
@@ -109,7 +109,7 @@ export function ProductList({ items }: ProductListProps) {
                   className={cn(
                     "mt-2 text-xs font-medium tracking-wide break-all",
                     product.accent === "red"
-                      ? "text-luwas-red/90"
+                      ? "text-ugnai-red/90"
                       : "text-brand-blue/80",
                   )}
                 >
@@ -147,7 +147,7 @@ export function ProductList({ items }: ProductListProps) {
                 className={cn(
                   "mt-1 size-5 shrink-0 text-muted-foreground/50 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:mt-0",
                   product.accent === "red"
-                    ? "group-hover:text-luwas-red"
+                    ? "group-hover:text-ugnai-red"
                     : "group-hover:text-brand-blue",
                 )}
               />
@@ -175,14 +175,14 @@ export function ProductList({ items }: ProductListProps) {
                 href={product.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group relative flex items-start gap-4 py-7 pl-0 transition sm:items-center sm:gap-6 sm:py-8"
+                className="group relative flex items-start gap-4 px-3 py-7 transition sm:items-center sm:gap-6 sm:px-4 sm:py-8"
               >
                 <span
                   className={cn(
-                    "absolute inset-y-0 left-0 w-0 bg-gradient-to-r to-transparent transition-all duration-300 group-hover:w-full",
+                    "absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100",
                     product.accent === "red"
-                      ? "from-luwas-red/10"
-                      : "from-brand-blue/8",
+                      ? "bg-ugnai-red/10"
+                      : "bg-brand-blue/8",
                   )}
                   aria-hidden
                 />
@@ -191,7 +191,7 @@ export function ProductList({ items }: ProductListProps) {
                 </span>
               </a>
             ) : (
-              <div className="flex items-start gap-4 py-7 sm:items-center sm:gap-6 sm:py-8">
+              <div className="flex items-start gap-4 px-3 py-7 sm:items-center sm:gap-6 sm:px-4 sm:py-8">
                 {content}
               </div>
             )}

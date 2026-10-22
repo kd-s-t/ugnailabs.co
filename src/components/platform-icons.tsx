@@ -47,6 +47,29 @@ export function ArIcon({ className }: IconProps) {
   return <Scan className={cn("size-3.5", className)} strokeWidth={1.75} />;
 }
 
+export function HeadbandIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+      className={cn("size-3.5", className)}
+    >
+      <path d="M7 15.5c0-3.5 2.2-6 5-6s5 2.5 5 6" />
+      <path d="M4.5 10.5h15" />
+      <path d="M4.5 10.5c-.8 1.2-.8 2.6 0 3.5" />
+      <path d="M19.5 10.5c.8 1.2.8 2.6 0 3.5" />
+      <circle cx="8.5" cy="10.5" r="1" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="10.5" r="1" fill="currentColor" stroke="none" />
+      <circle cx="15.5" cy="10.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 export const platformMeta = {
   ios: { label: "iOS", Icon: AppleIcon },
   android: { label: "Android", Icon: AndroidIcon },

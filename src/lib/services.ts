@@ -1,3 +1,4 @@
+import type { ComponentType } from "react";
 import type { LucideIcon } from "lucide-react";
 import {
   Brain,
@@ -6,13 +7,20 @@ import {
   Globe,
   Link2,
   Scan,
-  Smartphone,
 } from "lucide-react";
+import {
+  AndroidIcon,
+  AppleIcon,
+  HeadbandIcon,
+} from "@/components/platform-icons";
+
+export type ServiceIcon = LucideIcon | ComponentType<{ className?: string }>;
 
 export type Service = {
   name: string;
   blurb: string;
-  icon: LucideIcon;
+  icon?: LucideIcon;
+  icons?: ServiceIcon[];
 };
 
 export const services: Service[] = [
@@ -24,7 +32,7 @@ export const services: Service[] = [
   {
     name: "Mobile",
     blurb: "iOS and Android apps for field and guest flows.",
-    icon: Smartphone,
+    icons: [AppleIcon, AndroidIcon],
   },
   {
     name: "Blockchain",
@@ -45,6 +53,11 @@ export const services: Service[] = [
     name: "IoT",
     blurb: "Sensors, devices, and live signals in the loop.",
     icon: Cpu,
+  },
+  {
+    name: "EEG",
+    blurb: "Brainwave capture, pattern training, and BCI control loops.",
+    icons: [HeadbandIcon],
   },
   {
     name: "QA",

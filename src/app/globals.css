@@ -10,8 +10,8 @@
   --brand-blue: #1a4fd6;
   --brand-teal: #1ec8b0;
   --brand-ink: #12161c;
-  --luwas-red: #c72929;
-  --luwas-red-dim: #9e1a1a;
+  --ugnai-red: #c72929;
+  --ugnai-red-dim: #9e1a1a;
   --line: rgba(18, 22, 28, 0.1);
   --mesh: radial-gradient(
       90% 70% at 8% 12%,
@@ -66,8 +66,8 @@
   --color-brand-blue: var(--brand-blue);
   --color-brand-teal: var(--brand-teal);
   --color-brand-ink: var(--brand-ink);
-  --color-luwas-red: var(--luwas-red);
-  --color-luwas-red-dim: var(--luwas-red-dim);
+  --color-ugnai-red: var(--ugnai-red);
+  --color-ugnai-red-dim: var(--ugnai-red-dim);
   --color-line: var(--line);
   --font-sans: var(--font-body);
   --font-display: var(--font-display);

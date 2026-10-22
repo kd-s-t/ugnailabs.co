@@ -25,29 +25,29 @@ export const team: Person[] = [
   {
     name: "Don Sebial",
     role: "Product Designer",
-    focus: "SplitSafe, LUWAS",
+    focus: "SplitSafe, UgnAI",
     blurb:
-      "UI/UX and graphic design for SplitSafe and LUWAS: brand, layout, and motion so tools stay clear without clutter.",
+      "UI/UX and graphic design for SplitSafe and UgnAI: brand, layout, and motion so tools stay clear without clutter.",
   },
   {
     name: "Jeanilou Labajo",
     role: "Quality Assurance",
-    focus: "LUWAS",
+    focus: "UgnAI",
     blurb:
-      "QA on LUWAS: regression and field-path checks so citizen and officer flows stay trustworthy before release.",
+      "QA on UgnAI: regression and field-path checks so citizen and officer flows stay trustworthy before release.",
   },
   {
     name: "Patricia Abrenica",
     role: "IT Application Support",
-    focus: "LUWAS",
+    focus: "UgnAI",
     blurb:
-      "IT application support for LUWAS: acceptance flows, edge cases, and support so what ships matches what the team promised.",
+      "IT application support for UgnAI: acceptance flows, edge cases, and support so what ships matches what the team promised.",
   },
   {
     name: "Khent Dela Paz",
     role: "AI / Machine Learning",
-    focus: "LUWAS, Vertex AI",
+    focus: "UgnAI, Vertex AI",
     blurb:
-      "Vertex AI on LUWAS. Trains models on image datasets, including YOLO, so field photos teach the system what to see.",
+      "Vertex AI on UgnAI. Trains models on image datasets, including YOLO, so field photos teach the system what to see.",
   },
 ];
