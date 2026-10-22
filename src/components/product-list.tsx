@@ -10,6 +10,9 @@ import { cn } from "@/lib/utils";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+const rowLayout =
+  "relative grid w-full grid-cols-[2.5rem_minmax(0,1fr)_auto] items-start gap-x-3 gap-y-3 sm:grid-cols-[2.5rem_minmax(0,1fr)_auto_auto] sm:items-center sm:gap-x-6";
+
 type ProductListProps = {
   items: Product[];
 };
@@ -22,10 +25,10 @@ export function ProductList({ items }: ProductListProps) {
       {items.map((product, index) => {
         const content = (
           <>
-            <span className="w-10 shrink-0 font-[family-name:var(--font-display)] text-sm text-muted-foreground/70 tabular-nums">
+            <span className="col-start-1 row-start-1 w-10 font-[family-name:var(--font-display)] text-sm text-muted-foreground/70 tabular-nums">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <div className="min-w-0 flex-1">
+            <div className="col-start-2 row-start-1 min-w-0">
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <h3
                   className={cn(
@@ -120,12 +123,12 @@ export function ProductList({ items }: ProductListProps) {
             {product.image ? (
               <div
                 className={cn(
-                  "flex shrink-0 items-center justify-center",
+                  "col-start-2 row-start-2 flex items-center sm:col-start-3 sm:row-start-1 sm:justify-self-end",
                   product.wideImageLg
-                    ? "h-16 w-[14rem] sm:h-[4.5rem] sm:w-64"
+                    ? "h-12 w-full max-w-60 sm:h-[4.5rem] sm:w-64 sm:max-w-none"
                     : product.wideImage
-                      ? "h-14 w-[12rem] sm:h-16 sm:w-56"
-                      : "size-[4.5rem] sm:size-24",
+                      ? "h-12 w-full max-w-56 sm:h-16 sm:w-56 sm:max-w-none"
+                      : "size-16 sm:size-24",
                 )}
               >
                 <Image
@@ -145,14 +148,17 @@ export function ProductList({ items }: ProductListProps) {
               <ArrowUpRight
                 aria-hidden
                 className={cn(
-                  "mt-1 size-5 shrink-0 text-muted-foreground/50 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:mt-0",
+                  "col-start-3 row-start-1 mt-0.5 size-5 text-muted-foreground/50 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:col-start-4 sm:mt-0",
                   product.accent === "red"
                     ? "group-hover:text-ugnai-red"
                     : "group-hover:text-brand-blue",
                 )}
               />
             ) : (
-              <span className="hidden size-5 sm:block" aria-hidden />
+              <span
+                className="col-start-3 row-start-1 hidden size-5 sm:col-start-4 sm:block"
+                aria-hidden
+              />
             )}
           </>
         );
@@ -175,7 +181,7 @@ export function ProductList({ items }: ProductListProps) {
                 href={product.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group relative flex items-start gap-4 px-3 py-7 transition sm:items-center sm:gap-6 sm:px-4 sm:py-8"
+                className="group relative block px-1 py-7 transition sm:px-4 sm:py-8"
               >
                 <span
                   className={cn(
@@ -186,12 +192,10 @@ export function ProductList({ items }: ProductListProps) {
                   )}
                   aria-hidden
                 />
-                <span className="relative flex w-full items-start gap-4 sm:items-center sm:gap-6">
-                  {content}
-                </span>
+                <span className={rowLayout}>{content}</span>
               </a>
             ) : (
-              <div className="flex items-start gap-4 px-3 py-7 sm:items-center sm:gap-6 sm:px-4 sm:py-8">
+              <div className={cn(rowLayout, "px-1 py-7 sm:px-4 sm:py-8")}>
                 {content}
               </div>
             )}

@@ -106,7 +106,7 @@ export function HomePage() {
 
       <header
         ref={heroRef}
-        className="relative isolate flex min-h-[100svh] items-end overflow-hidden bg-background pb-16 pt-28 sm:items-center sm:pb-0 sm:pt-16"
+        className="relative isolate flex overflow-hidden bg-background pt-20 pb-8 sm:min-h-[100svh] sm:items-center sm:pt-16 sm:pb-0"
       >
         <div
           className="absolute inset-0 -z-10"
@@ -226,7 +226,7 @@ export function HomePage() {
             </p>
           </motion.div>
 
-          <ul className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
+          <ul className="mt-14 grid grid-cols-1 gap-3 min-[480px]:grid-cols-2 sm:grid-cols-3 sm:gap-4">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (

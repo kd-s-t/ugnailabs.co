@@ -51,7 +51,7 @@ export function Logo({
         />
       </svg>
       {showWordmark ? (
-        <span className="font-[family-name:var(--font-display)] text-[1.35rem] leading-none tracking-tight sm:text-[1.7rem]">
+        <span className="font-[family-name:var(--font-display)] text-[1.05rem] leading-none tracking-tight whitespace-nowrap sm:text-[1.7rem]">
           <span className="font-semibold">
             Ugn
             <span className="bg-gradient-to-r from-brand-blue to-brand-teal bg-clip-text text-transparent">
