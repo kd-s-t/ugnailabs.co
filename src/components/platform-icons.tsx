@@ -1,4 +1,4 @@
-import { Globe, Hexagon, Scan, Sparkles } from "lucide-react";
+import { Globe, Hexagon, Package, Scan, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type IconProps = {
@@ -47,6 +47,10 @@ export function ArIcon({ className }: IconProps) {
   return <Scan className={cn("size-3.5", className)} strokeWidth={1.75} />;
 }
 
+export function NpmIcon({ className }: IconProps) {
+  return <Package className={cn("size-3.5", className)} strokeWidth={1.75} />;
+}
+
 export function HeadbandIcon({ className }: IconProps) {
   return (
     <svg
@@ -77,4 +81,6 @@ export const platformMeta = {
   ai: { label: "AI", Icon: AiIcon },
   blockchain: { label: "Blockchain", Icon: BlockchainIcon },
   ar: { label: "AR", Icon: ArIcon },
+  eeg: { label: "EEG", Icon: HeadbandIcon },
+  npm: { label: "NPM", Icon: NpmIcon },
 } as const;

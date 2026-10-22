@@ -18,7 +18,7 @@ export type Product = {
   /** Registered / active users. */
   users?: number;
   /** Platform / capability marks shown on the row. */
-  platforms?: Array<"ios" | "android" | "web" | "ai" | "blockchain" | "ar">;
+  platforms?: Array<"ios" | "android" | "web" | "ai" | "blockchain" | "ar" | "eeg" | "npm">;
 };
 
 export const products: Product[] = [
@@ -62,7 +62,6 @@ export const products: Product[] = [
     blurb:
       "Command for barangays and LGUs: field reports, AI triage, and live situation maps.",
     href: "https://ugnaiph.com",
-    accent: "red",
     comingSoon: true,
     statusLabel: "Currently in hackathon",
     users: 0,

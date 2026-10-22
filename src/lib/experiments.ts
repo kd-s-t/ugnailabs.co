@@ -28,7 +28,7 @@ export const experiments: Product[] = [
     image: "/products/neuropilot-mark.png",
     comingSoon: true,
     statusLabel: "Paused",
-    platforms: ["web", "ai"],
+    platforms: ["web", "ai", "eeg"],
   },
   {
     name: "Chapter Studio",
@@ -57,7 +57,7 @@ export const experiments: Product[] = [
       "Stateful AI video memory for multimodal models. Persist structured watch-state across frames.",
     href: "https://www.npmjs.com/package/stateful-ai-video",
     image: "/products/stateful-ai-video-logo.png",
-    platforms: ["ai"],
+    platforms: ["ai", "npm"],
     comingSoon: true,
     statusLabel: "Paused",
   },
@@ -66,7 +66,6 @@ export const experiments: Product[] = [
     tag: "iOS",
     blurb:
       "Wristband-based gamefowl registry. Yards, biodata, search, and Premium on iPhone.",
-    href: "https://github.com/kd-s-t/hackles",
     image: "/products/hackles-logo.png",
     platforms: ["ios"],
     comingSoon: true,
