@@ -56,8 +56,9 @@ export const products: Product[] = [
     platforms: ["ios", "android", "web", "ai"],
   },
   {
-    name: "UgnAI",
+    name: "UGNAI",
     tag: "DRRM",
+    meaning: "Unified Guidance for Needs, Alerts & Incidents",
     blurb:
       "Command for barangays and LGUs: field reports, AI triage, and live situation maps.",
     href: "https://ugnaiph.com",

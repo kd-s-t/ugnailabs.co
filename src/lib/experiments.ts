@@ -2,6 +2,15 @@ import type { Product } from "@/lib/products";
 
 export const experiments: Product[] = [
   {
+    name: "BlackLocust",
+    tag: "Vision",
+    blurb:
+      "AI trainer powered by Yolo26. Upload a dataset, train a model, and test it.",
+    href: "https://black-locust-zvjh.vercel.app/",
+    image: "/products/blacklocust-logo.png",
+    platforms: ["web", "ai"],
+  },
+  {
     name: "Offline AI",
     tag: "Local AI",
     blurb:
@@ -19,7 +28,7 @@ export const experiments: Product[] = [
     image: "/products/neuropilot-mark.png",
     comingSoon: true,
     statusLabel: "Paused",
-    platforms: ["web", "ios", "android", "ai"],
+    platforms: ["web", "ai"],
   },
   {
     name: "Chapter Studio",
