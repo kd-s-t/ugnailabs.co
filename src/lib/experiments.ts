@@ -10,7 +10,6 @@ export const experiments: Product[] = [
     href: "/products/ugnai",
     comingSoon: true,
     statusLabel: "Paused",
-    accent: "red",
     platforms: ["web", "ai"],
   },
   {
