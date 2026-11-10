@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +14,10 @@ const ease = [0.22, 1, 0.36, 1] as const;
 const rowLayout =
   "relative grid w-full grid-cols-[2.5rem_minmax(0,1fr)_auto] items-start gap-x-3 gap-y-3 sm:grid-cols-[2.5rem_minmax(0,1fr)_auto_auto] sm:items-center sm:gap-x-6";
 
+function isExternalHref(href: string) {
+  return /^https?:\/\//i.test(href);
+}
+
 type ProductListProps = {
   items: Product[];
 };
@@ -23,6 +28,7 @@ export function ProductList({ items }: ProductListProps) {
   return (
     <ul className="mt-16">
       {items.map((product, index) => {
+        const external = product.href ? isExternalHref(product.href) : false;
         const content = (
           <>
             <span className="col-start-1 row-start-1 w-10 font-[family-name:var(--font-display)] text-sm text-muted-foreground/70 tabular-nums">
@@ -107,7 +113,7 @@ export function ProductList({ items }: ProductListProps) {
                   })}
                 </ul>
               ) : null}
-              {product.href ? (
+              {product.href && external ? (
                 <p
                   className={cn(
                     "mt-2 text-xs font-medium tracking-wide break-all",
@@ -177,23 +183,41 @@ export function ProductList({ items }: ProductListProps) {
             className="border-t border-border/80 last:border-b"
           >
             {product.href ? (
-              <a
-                href={product.href}
-                target="_blank"
-                rel="noreferrer"
-                className="group relative block px-1 py-7 transition sm:px-4 sm:py-8"
-              >
-                <span
-                  className={cn(
-                    "absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100",
-                    product.accent === "red"
-                      ? "bg-ugnai-red/10"
-                      : "bg-brand-blue/8",
-                  )}
-                  aria-hidden
-                />
-                <span className={rowLayout}>{content}</span>
-              </a>
+              external ? (
+                <a
+                  href={product.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group relative block px-1 py-7 transition sm:px-4 sm:py-8"
+                >
+                  <span
+                    className={cn(
+                      "absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100",
+                      product.accent === "red"
+                        ? "bg-ugnai-red/10"
+                        : "bg-brand-blue/8",
+                    )}
+                    aria-hidden
+                  />
+                  <span className={rowLayout}>{content}</span>
+                </a>
+              ) : (
+                <Link
+                  href={product.href}
+                  className="group relative block px-1 py-7 transition sm:px-4 sm:py-8"
+                >
+                  <span
+                    className={cn(
+                      "absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100",
+                      product.accent === "red"
+                        ? "bg-ugnai-red/10"
+                        : "bg-brand-blue/8",
+                    )}
+                    aria-hidden
+                  />
+                  <span className={rowLayout}>{content}</span>
+                </Link>
+              )
             ) : (
               <div className={cn(rowLayout, "px-1 py-7 sm:px-4 sm:py-8")}>
                 {content}

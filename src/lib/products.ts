@@ -20,7 +20,9 @@ export type Product = {
   /** Registered / active users. */
   users?: number;
   /** Platform / capability marks shown on the row. */
-  platforms?: Array<"ios" | "android" | "web" | "ai" | "blockchain" | "ar" | "eeg" | "npm">;
+  platforms?: Array<
+    "ios" | "android" | "macos" | "web" | "ai" | "blockchain" | "ar" | "eeg" | "npm"
+  >;
 };
 
 export const products: Product[] = [
@@ -29,7 +31,7 @@ export const products: Product[] = [
     tag: "Payments",
     blurb:
       "Trustless escrow and split payments on ICP with ckBTC and milestone settlement.",
-    href: "https://ecyax-oiaaa-aaaai-q323q-cai.icp0.io",
+    href: "/products/splitsafe",
     image: "/products/splitsafe-logo.png",
     wideImage: true,
     wideImageLg: true,
@@ -41,7 +43,7 @@ export const products: Product[] = [
     tag: "Hospitality",
     blurb:
       "Direct-booking stay in Cebu IT Park: availability, check-in, and local payments.",
-    href: "https://yumisintimateabode.com",
+    href: "/products/yumis-intimate-abode",
     image: "/products/yumis-logo.png",
     users: 2,
     platforms: ["ios", "android", "web"],
@@ -51,30 +53,18 @@ export const products: Product[] = [
     tag: "Sports",
     blurb:
       "Pickleball court booking with local payments, tournaments, and multilingual support.",
-    href: "https://xcourtcebu.com",
+    href: "/products/x-court-cebu",
     image: "/products/xcourt-logo.png",
     wideImage: true,
     users: 407,
     platforms: ["ios", "android", "web", "ai"],
   },
   {
-    name: "UGNAI",
-    tag: "DRRM",
-    meaning: "Unified Guidance for Needs, Alerts & Incidents",
-    blurb:
-      "Command for barangays and LGUs: field reports, AI triage, and live situation maps.",
-    href: "https://ugnaiph.com",
-    comingSoon: true,
-    statusLabel: "Currently in hackathon",
-    users: 0,
-    platforms: ["web", "ai"],
-  },
-  {
     name: "Siargao Trading Road",
     tag: "Commerce",
     blurb:
       "B2B marketplace connecting suppliers and stores across Siargao.",
-    href: "https://siargao-trading-road-git-main-kd-s-ts-projects.vercel.app",
+    href: "/products/siargao-trading-road",
     image: "/products/siargao-logo.png",
     wideImage: true,
     users: 0,

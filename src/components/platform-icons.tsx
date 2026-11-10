@@ -77,6 +77,7 @@ export function HeadbandIcon({ className }: IconProps) {
 export const platformMeta = {
   ios: { label: "iOS", Icon: AppleIcon },
   android: { label: "Android", Icon: AndroidIcon },
+  macos: { label: "macOS", Icon: AppleIcon },
   web: { label: "Web", Icon: WebIcon },
   ai: { label: "AI", Icon: AiIcon },
   blockchain: { label: "Blockchain", Icon: BlockchainIcon },
