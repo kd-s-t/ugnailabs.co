@@ -64,13 +64,14 @@ export function ProductList({ items }: ProductListProps) {
                 ) : product.href && product.live !== false ? (
                   <Badge
                     variant="secondary"
-                    className={cn(
-                      "rounded-md",
-                      product.accent === "red"
-                        ? "bg-ugnai-red/12 text-ugnai-red-dim"
-                        : "bg-brand-teal/15 text-brand-ink",
-                    )}
+                    className="gap-1.5 rounded-md bg-red-500/10 text-red-700"
                   >
+                    <span className="relative flex size-2 shrink-0" aria-hidden>
+                      {!reduceMotion ? (
+                        <span className="absolute inset-0 animate-ping rounded-full bg-red-500 opacity-60" />
+                      ) : null}
+                      <span className="relative size-2 rounded-full bg-red-500" />
+                    </span>
                     Live
                   </Badge>
                 ) : null}
