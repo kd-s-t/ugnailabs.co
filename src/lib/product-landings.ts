@@ -111,9 +111,10 @@ export const productLandings: ProductLanding[] = [
     description:
       "Direct-booking stay in Cebu IT Park: availability, check-in, and local payments.",
     image: "/products/yumis-logo.png",
-    accent: "#7ec8e3",
-    accentRgb: "126, 200, 227",
-    bg: "#081018",
+    accent: "#3d9ec4",
+    accentRgb: "61, 158, 196",
+    bg: "#ffffff",
+    tone: "light",
     section: "products",
     cta: {
       label: "Book a stay",
