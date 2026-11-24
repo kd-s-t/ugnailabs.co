@@ -128,7 +128,7 @@ export function BiringhamPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.2, ease }}
           >
-            An invisible city of craft. Your code never leaves the Mac.
+            Offline chat and coding on your Mac. Your code never leaves the device.
           </motion.p>
 
           <motion.div
@@ -271,13 +271,13 @@ export function BiringhamPage() {
             transition={{ duration: 0.7, ease }}
           >
             <p className="text-xs font-medium tracking-[0.3em] text-[#d4a030] uppercase">
-              Somewhere unseen
+              Local by default
             </p>
             <h2 className="mx-auto mt-3 max-w-2xl font-[family-name:var(--font-display)] text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold tracking-tight text-white">
-              An invisible city of craft.
+              Your project stays on your Mac.
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/55">
-              Find it when the lights go out. A product of UgnAI Labs Co.
+              A product of UgnAI Labs Co.
             </p>
             <div className="mt-10">
               <Button
