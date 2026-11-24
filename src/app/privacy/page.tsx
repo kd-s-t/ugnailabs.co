@@ -23,10 +23,10 @@ export default function PrivacyPage() {
           Individual products may publish their own privacy notices. Where those
           notices differ, the product policy applies to that product. See{" "}
           <a
-            href="/products/conjure/privacy"
+            href="/products/biringham/privacy"
             className="font-medium text-brand-blue underline-offset-2 hover:underline"
           >
-            Conjure Privacy
+            Biringham Privacy
           </a>
           .
         </p>

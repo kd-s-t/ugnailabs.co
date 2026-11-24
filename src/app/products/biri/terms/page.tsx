@@ -1,2 +1,2 @@
 import { redirect } from "next/navigation";
-export default function Page() { redirect("/products/conjure/terms"); }
+export default function Page() { redirect("/products/biringham/terms"); }
