@@ -36,7 +36,7 @@ export const services: Service[] = [
   },
   {
     name: "macOS",
-    blurb: "Native Mac apps for local AI, tooling, and desktop workflows.",
+    blurb: "Native Mac apps of any kind, built for the desktop.",
     icons: [AppleIcon],
   },
   {
