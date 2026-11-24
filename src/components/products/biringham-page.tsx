@@ -290,6 +290,12 @@ export function BiringhamPage() {
           <Link href="/products/biringham/terms" className="transition hover:text-white">
             Terms
           </Link>
+          <a
+            href="mailto:kendantinio@gmail.com"
+            className="transition hover:text-white"
+          >
+            kendantinio@gmail.com
+          </a>
         </p>
       </footer>
     </div>
