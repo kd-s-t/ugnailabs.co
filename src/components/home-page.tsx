@@ -456,20 +456,22 @@ export function HomePage() {
           <p className="mt-4 text-xs text-white/55">
             ©2026 UgnAI Labs Co. All rights reserved.
           </p>
-          <a
-            href="/dti-certificate-demo.pdf"
-            target="_blank"
-            rel="noreferrer"
-            className="mt-5 inline-flex opacity-90 transition hover:opacity-100"
-          >
-            <Image
-              src="/dti-logo.png"
-              alt="DTI Certificate of Business Name Registration"
-              width={180}
-              height={79}
-              className="h-9 w-auto object-contain sm:h-10"
-            />
-          </a>
+          {process.env.NODE_ENV === "development" ? (
+            <a
+              href="/dti-certificate-demo.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-5 inline-flex opacity-90 transition hover:opacity-100"
+            >
+              <Image
+                src="/dti-logo.png"
+                alt="DTI Certificate of Business Name Registration"
+                width={180}
+                height={79}
+                className="h-9 w-auto object-contain sm:h-10"
+              />
+            </a>
+          ) : null}
           <nav
             aria-label="Footer"
             className="mt-8 flex flex-wrap items-center justify-center gap-2"
