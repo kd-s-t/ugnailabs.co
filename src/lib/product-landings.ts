@@ -57,7 +57,6 @@ export type ProductLanding = {
 export const CUSTOM_PRODUCT_SLUGS = [
   "biri",
   "biringham",
-  "conjure",
   "blacklocust",
   "stateful-ai-video",
 ] as const;
