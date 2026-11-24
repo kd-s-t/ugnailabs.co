@@ -154,13 +154,13 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
 
         <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-5 py-16 text-center sm:px-8 sm:py-24">
           <motion.div
-            className="relative"
+            className="relative mx-auto flex w-full justify-center"
             initial={reduceMotion ? false : { opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, ease }}
           >
             <motion.div
-              className="pointer-events-none absolute inset-0 -z-10 rounded-[2rem]"
+              className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-[min(100%,22rem)] -translate-x-1/2 -translate-y-1/2 rounded-full"
               style={{
                 background: `radial-gradient(circle, rgba(${rgb},0.4) 0%, transparent 68%)`,
                 filter: "blur(28px)",
@@ -177,11 +177,11 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
               <Image
                 src={product.image}
                 alt={product.name}
-                width={product.wideImage ? 320 : 160}
-                height={product.wideImage ? 120 : 160}
+                width={product.wideImage ? 380 : 160}
+                height={product.wideImage ? 100 : 160}
                 priority
                 className={cn(
-                  "object-contain",
+                  "mx-auto block object-contain",
                   product.wideImage
                     ? "h-20 w-auto max-w-[min(100%,20rem)] sm:h-28"
                     : "size-28 rounded-[1.65rem] object-cover shadow-[0_24px_60px_rgba(0,0,0,0.45)] sm:size-40 sm:rounded-[2rem]",
