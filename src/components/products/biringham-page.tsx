@@ -3,14 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowLeft, Download, FolderOpen, MessageSquare, Shield } from "lucide-react";
+import { ArrowLeft, FolderOpen, MessageSquare, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
-import { AppleIcon } from "@/components/platform-icons";
 import { cn } from "@/lib/utils";
-
-/** Drop the build at this path when ready to ship. */
-const BIRINGHAM_MACOS_DOWNLOAD = "/downloads/Biringham.dmg";
 
 
 
@@ -137,21 +133,9 @@ export function BiringhamPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.3, ease }}
           >
-            <Button
-              nativeButton={false}
-              render={
-                <a href={BIRINGHAM_MACOS_DOWNLOAD} download="Biringham.dmg" />
-              }
-              size="lg"
-              className="h-11 rounded-md bg-[#1ec8b0] px-6 text-[#0c1012] hover:bg-[#2ad4bc]"
-            >
-              <Download data-icon="inline-start" className="size-4" />
-              Download now
-              <span className="ml-1.5 inline-flex items-center gap-1.5 border-l border-[#0c1012]/20 pl-2 text-[#0c1012]/70">
-                <AppleIcon className="size-3.5 opacity-90" />
-                macOS
-              </span>
-            </Button>
+            <span className="inline-flex h-11 items-center rounded-md bg-[#1ec8b0]/12 px-4 text-sm font-medium tracking-wide text-[#1ec8b0] ring-1 ring-[#1ec8b0]/35">
+              In development
+            </span>
             <Button
               nativeButton={false}
               render={<a href="#features" />}
