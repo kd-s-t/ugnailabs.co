@@ -183,7 +183,7 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
                 className={cn(
                   "mx-auto block object-contain",
                   product.wideImage
-                    ? "h-20 w-auto max-w-[min(100%,20rem)] sm:h-28"
+                    ? "h-24 w-auto max-w-[min(100%,22rem)] sm:h-32"
                     : "size-28 rounded-[1.65rem] object-cover shadow-[0_24px_60px_rgba(0,0,0,0.45)] sm:size-40 sm:rounded-[2rem]",
                 )}
                 style={
