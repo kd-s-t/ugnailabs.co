@@ -56,6 +56,7 @@ export type ProductLanding = {
 /** Custom pages own these slugs; kept out of the generic registry. */
 export const CUSTOM_PRODUCT_SLUGS = [
   "biri",
+  "biringham",
   "blacklocust",
   "stateful-ai-video",
 ] as const;

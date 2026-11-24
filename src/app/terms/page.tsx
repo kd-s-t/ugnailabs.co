@@ -30,7 +30,7 @@ export default function TermsPage() {
           Separate products and apps may have their own terms of service. Those
           terms control use of those products. See{" "}
           <a
-            href="/products/biri/terms"
+            href="/products/biringham/terms"
             className="font-medium text-brand-blue underline-offset-2 hover:underline"
           >
             Biringham Terms
