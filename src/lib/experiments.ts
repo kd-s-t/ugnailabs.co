@@ -28,7 +28,7 @@ export const experiments: Product[] = [
     blurb:
       "Native macOS app for offline chat and coding. Open a folder, talk to local Ollama models, drop screenshots, track usage per project.",
     href: "/products/conjure",
-    image: "/products/biri-logo.png",
+    image: "/products/conjure-logo.png",
     comingSoon: true,
     statusLabel: "In development",
     platforms: ["macos", "ai"],

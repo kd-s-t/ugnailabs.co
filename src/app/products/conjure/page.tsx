@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Conjure · UgnAI Labs Co.",
     description:
       "Native macOS app for offline chat and coding. Your code never leaves the Mac.",
-    images: ["/products/biri-logo.png"],
+    images: ["/products/conjure-logo.png"],
   },
 };
 

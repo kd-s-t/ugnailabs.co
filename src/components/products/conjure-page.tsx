@@ -104,7 +104,7 @@ export function ConjurePage() {
               transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
             />
             <Image
-              src="/products/biri-logo.png"
+              src="/products/conjure-logo.png"
               alt="Conjure"
               width={160}
               height={160}
