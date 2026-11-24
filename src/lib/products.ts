@@ -56,7 +56,7 @@ export const products: Product[] = [
     href: "/products/x-court-cebu",
     image: "/products/xcourt-logo.png",
     wideImage: true,
-    users: 407,
+    users: 701,
     platforms: ["ios", "android", "web", "ai"],
   },
   {
