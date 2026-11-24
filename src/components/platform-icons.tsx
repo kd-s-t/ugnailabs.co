@@ -1,4 +1,4 @@
-import { Globe, Hexagon, Package, Scan, Sparkles } from "lucide-react";
+import { Bot, Globe, Hexagon, Package, Scan } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type IconProps = {
@@ -36,7 +36,7 @@ export function WebIcon({ className }: IconProps) {
 }
 
 export function AiIcon({ className }: IconProps) {
-  return <Sparkles className={cn("size-3.5", className)} strokeWidth={1.75} />;
+  return <Bot className={cn("size-3.5", className)} strokeWidth={1.75} />;
 }
 
 export function BlockchainIcon({ className }: IconProps) {
