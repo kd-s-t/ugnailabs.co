@@ -34,6 +34,18 @@ export const experiments: Product[] = [
     platforms: ["macos", "ai"],
   },
   {
+    name: "Siargao Trading Road",
+    tag: "Commerce",
+    blurb:
+      "B2B marketplace connecting suppliers and stores across Siargao.",
+    href: "/products/siargao-trading-road",
+    image: "/products/siargao-logo.png",
+    wideImage: true,
+    comingSoon: true,
+    statusLabel: "Still cooking",
+    platforms: ["android", "web"],
+  },
+  {
     name: "NeuroPilot",
     tag: "BCI",
     blurb:

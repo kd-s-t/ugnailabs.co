@@ -59,17 +59,4 @@ export const products: Product[] = [
     users: 701,
     platforms: ["ios", "android", "web", "ai"],
   },
-  {
-    name: "Siargao Trading Road",
-    tag: "Commerce",
-    blurb:
-      "B2B marketplace connecting suppliers and stores across Siargao.",
-    href: "/products/siargao-trading-road",
-    image: "/products/siargao-logo.png",
-    wideImage: true,
-    users: 0,
-    comingSoon: true,
-    statusLabel: "Still cooking",
-    platforms: ["android", "web"],
-  },
 ];

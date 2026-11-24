@@ -228,7 +228,7 @@ export const productLandings: ProductLanding[] = [
     accent: "#54b8c5",
     accentRgb: "84, 184, 197",
     bg: "#070b12",
-    section: "products",
+    section: "lab",
     statusLabel: "Still cooking",
     features: [
       {
