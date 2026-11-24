@@ -148,8 +148,8 @@ export const productLandings: ProductLanding[] = [
       "Pickleball court booking with local payments, tournaments, and multilingual support.",
     image: "/products/xcourt-logo.png",
     wideImage: true,
-    accent: "#e31e24",
-    accentRgb: "227, 30, 36",
+    accent: "#c9a227",
+    accentRgb: "201, 162, 39",
     bg: "#0a0a0a",
     section: "products",
     cta: {
