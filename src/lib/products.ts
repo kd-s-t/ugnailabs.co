@@ -68,6 +68,8 @@ export const products: Product[] = [
     image: "/products/siargao-logo.png",
     wideImage: true,
     users: 0,
+    comingSoon: true,
+    statusLabel: "Paused",
     platforms: ["android", "web"],
   },
 ];

@@ -226,10 +226,7 @@ export const productLandings: ProductLanding[] = [
     accentRgb: "84, 184, 197",
     bg: "#070b12",
     section: "products",
-    cta: {
-      label: "Open marketplace",
-      href: "https://siargao-trading-road-git-main-kd-s-ts-projects.vercel.app",
-    },
+    statusLabel: "Paused",
     features: [
       {
         icon: "store",
