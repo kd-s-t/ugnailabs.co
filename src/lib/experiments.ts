@@ -30,7 +30,7 @@ export const experiments: Product[] = [
     href: "/products/biringham",
     image: "/products/biri-logo.png",
     comingSoon: true,
-    statusLabel: "In development",
+    statusLabel: "Ongoing",
     platforms: ["macos", "ai"],
   },
   {
