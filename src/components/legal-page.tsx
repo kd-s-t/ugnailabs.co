@@ -5,9 +5,19 @@ type LegalPageProps = {
   title: string;
   description: string;
   children: React.ReactNode;
+  updated?: string;
+  backHref?: string;
+  backLabel?: string;
 };
 
-export function LegalPage({ title, description, children }: LegalPageProps) {
+export function LegalPage({
+  title,
+  description,
+  children,
+  updated = "14 Oct 2026",
+  backHref = "/",
+  backLabel = "Home",
+}: LegalPageProps) {
   return (
     <div className="relative min-h-full bg-background">
       <div className="site-grain" aria-hidden />
@@ -17,10 +27,10 @@ export function LegalPage({ title, description, children }: LegalPageProps) {
             <Logo className="gap-2" markClassName="size-7 sm:size-8" />
           </Link>
           <Link
-            href="/"
+            href={backHref}
             className="text-sm text-muted-foreground transition hover:text-brand-ink"
           >
-            Home
+            {backLabel}
           </Link>
         </div>
       </header>
@@ -36,7 +46,7 @@ export function LegalPage({ title, description, children }: LegalPageProps) {
           {description}
         </p>
         <p className="mt-6 text-[11px] font-medium tracking-[0.18em] text-muted-foreground/80 uppercase">
-          Last updated · 14 Oct 2026
+          Last updated · {updated}
         </p>
         <div className="mt-10 space-y-8 text-sm leading-relaxed text-muted-foreground sm:text-[15px]">
           {children}

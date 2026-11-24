@@ -297,7 +297,15 @@ export function BiriPage() {
 
       <footer className="mt-auto border-t border-white/8 py-10 text-center">
         <p className="text-xs text-white/40">
-          ©2026 UgnAI Labs Co. · Biri
+          ©2026 UgnAI Labs Co. · Biringham
+        </p>
+        <p className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-white/45">
+          <Link href="/products/biri/privacy" className="transition hover:text-white">
+            Privacy
+          </Link>
+          <Link href="/products/biri/terms" className="transition hover:text-white">
+            Terms
+          </Link>
         </p>
       </footer>
     </div>

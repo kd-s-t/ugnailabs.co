@@ -20,9 +20,15 @@ export default function PrivacyPage() {
           policy covers ugnailabs.co and contact flows on this site.
         </p>
         <p>
-          Individual products (for example SplitSafe, X Court Cebu, or UgnAI)
-          may publish their own privacy notices. Where those notices differ, the
-          product policy applies to that product.
+          Individual products may publish their own privacy notices. Where those
+          notices differ, the product policy applies to that product. See{" "}
+          <a
+            href="/products/biri/privacy"
+            className="font-medium text-brand-blue underline-offset-2 hover:underline"
+          >
+            Biringham Privacy
+          </a>
+          .
         </p>
       </LegalSection>
 
