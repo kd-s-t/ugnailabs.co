@@ -35,6 +35,11 @@ export const services: Service[] = [
     icons: [AppleIcon, AndroidIcon],
   },
   {
+    name: "macOS",
+    blurb: "Native Mac apps for local AI, tooling, and desktop workflows.",
+    icons: [AppleIcon],
+  },
+  {
     name: "Blockchain",
     blurb: "Escrow, wallets, and on-chain settlement rails.",
     icon: Link2,
