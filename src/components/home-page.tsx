@@ -222,7 +222,7 @@ export function HomePage() {
               What we build with you.
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/60">
-              Full-stack delivery across web, mobile, chain, AI, AR, IoT, EEG, and QA.
+              Full-stack delivery across web, mobile, macOS, chain, AI, AR, IoT, EEG, and QA.
             </p>
           </motion.div>
 
