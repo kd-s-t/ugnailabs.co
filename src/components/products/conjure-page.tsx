@@ -10,7 +10,7 @@ import { AppleIcon } from "@/components/platform-icons";
 import { cn } from "@/lib/utils";
 
 /** Drop the build at this path when ready to ship. */
-const BIRINGHAM_MACOS_DOWNLOAD = "/downloads/Biringham.dmg";
+const CONJURE_MACOS_DOWNLOAD = "/downloads/Conjure.dmg";
 
 
 
@@ -34,7 +34,7 @@ const features = [
   },
 ] as const;
 
-export function BiringhamPage() {
+export function ConjurePage() {
   const reduceMotion = useReducedMotion();
 
   return (
@@ -105,7 +105,7 @@ export function BiringhamPage() {
             />
             <Image
               src="/products/biri-logo.png"
-              alt="Biringham"
+              alt="Conjure"
               width={160}
               height={160}
               priority
@@ -119,7 +119,7 @@ export function BiringhamPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.1, ease }}
           >
-            Biringham
+            Conjure
           </motion.h1>
 
           <motion.p
@@ -140,7 +140,7 @@ export function BiringhamPage() {
             <Button
               nativeButton={false}
               render={
-                <a href={BIRINGHAM_MACOS_DOWNLOAD} download="Biringham.dmg" />
+                <a href={CONJURE_MACOS_DOWNLOAD} download="Conjure.dmg" />
               }
               size="lg"
               className="h-11 rounded-md bg-[#1ec8b0] px-6 text-[#0c1012] hover:bg-[#2ad4bc]"
@@ -247,7 +247,7 @@ export function BiringhamPage() {
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/55 sm:text-lg">
               Blackout worldwide. No internet. No electricity from the grid.
-              Just your solar panels, your laptop, and Biringham, with models already
+              Just your solar panels, your laptop, and Conjure, with models already
               on disk.
             </p>
           </motion.div>
@@ -297,13 +297,13 @@ export function BiringhamPage() {
 
       <footer className="mt-auto border-t border-white/8 py-10 text-center">
         <p className="text-xs text-white/40">
-          ©2026 UgnAI Labs Co. · Biringham
+          ©2026 UgnAI Labs Co. · Conjure
         </p>
         <p className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-white/45">
-          <Link href="/products/biringham/privacy" className="transition hover:text-white">
+          <Link href="/products/conjure/privacy" className="transition hover:text-white">
             Privacy
           </Link>
-          <Link href="/products/biringham/terms" className="transition hover:text-white">
+          <Link href="/products/conjure/terms" className="transition hover:text-white">
             Terms
           </Link>
         </p>

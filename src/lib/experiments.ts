@@ -23,11 +23,11 @@ export const experiments: Product[] = [
     platforms: ["web", "ai"],
   },
   {
-    name: "Biringham",
+    name: "Conjure",
     tag: "Local AI",
     blurb:
       "Native macOS app for offline chat and coding. Open a folder, talk to local Ollama models, drop screenshots, track usage per project.",
-    href: "/products/biringham",
+    href: "/products/conjure",
     image: "/products/biri-logo.png",
     comingSoon: true,
     statusLabel: "In development",
