@@ -163,10 +163,10 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
                 height={product.wideImage ? 120 : 160}
                 priority
                 className={cn(
-                  "object-contain shadow-[0_24px_60px_rgba(0,0,0,0.45)]",
+                  "object-contain",
                   product.wideImage
                     ? "h-20 w-auto max-w-[min(100%,20rem)] sm:h-28"
-                    : "size-28 rounded-[1.65rem] object-cover sm:size-40 sm:rounded-[2rem]",
+                    : "size-28 rounded-[1.65rem] object-cover shadow-[0_24px_60px_rgba(0,0,0,0.45)] sm:size-40 sm:rounded-[2rem]",
                 )}
                 style={
                   product.wideImage
