@@ -85,22 +85,40 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
   const backLabel = product.section === "lab" ? "Lab" : "Products";
   const accent = product.accent;
   const rgb = product.accentRgb;
+  const light = product.tone === "light";
+  const ink = light ? "#1a1a1a" : "#e8eef0";
+  const muted = light ? "text-black/55" : "text-white/55";
+  const soft = light ? "text-black/45" : "text-white/45";
+  const body = light ? "text-black/60" : "text-white/60";
+  const hairline = light ? "border-black/10" : "border-white/8";
+  const hairlineStrong = light ? "border-black/10" : "border-white/10";
+  const outlineBtn = light
+    ? "h-11 rounded-md border-black/15 bg-white/60 px-5 text-[#1a1a1a] hover:bg-white hover:text-[#1a1a1a]"
+    : "h-11 rounded-md border-white/20 bg-white/5 px-5 text-white hover:bg-white/10 hover:text-white";
+  const ctaInk = light ? "#1a1a1a" : product.bg;
 
   return (
     <div
-      className="relative flex min-h-full flex-col overflow-x-hidden text-[#e8eef0]"
-      style={{ backgroundColor: product.bg }}
+      className="relative flex min-h-full flex-col overflow-x-hidden"
+      style={{ backgroundColor: product.bg, color: ink }}
     >
       <div className="site-grain opacity-[0.05] mix-blend-soft-light" aria-hidden />
 
       <nav
-        className="fixed inset-x-0 top-0 z-40 border-b border-white/8 backdrop-blur-xl"
+        className={cn(
+          "fixed inset-x-0 top-0 z-40 border-b backdrop-blur-xl",
+          hairline,
+        )}
         style={{ backgroundColor: `${product.bg}bf` }}
       >
         <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-5 sm:h-16 sm:px-8">
           <Link
             href={backHref}
-            className="inline-flex items-center gap-2 text-sm text-white/55 transition hover:text-white"
+            className={cn(
+              "inline-flex items-center gap-2 text-sm transition",
+              muted,
+              light ? "hover:text-black" : "hover:text-white",
+            )}
           >
             <ArrowLeft className="size-3.5" aria-hidden />
             {backLabel}
@@ -109,7 +127,7 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
             <Logo
               className="gap-2"
               markClassName="size-7 sm:size-8"
-              inverted
+              inverted={!light}
             />
           </Link>
         </div>
@@ -203,7 +221,8 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
           </motion.p>
 
           <motion.h1
-            className="mt-3 max-w-[16ch] font-[family-name:var(--font-display)] text-[clamp(2.4rem,7vw,4.5rem)] font-semibold leading-[1.02] tracking-tight text-white"
+            className="mt-3 max-w-[16ch] font-[family-name:var(--font-display)] text-[clamp(2.4rem,7vw,4.5rem)] font-semibold leading-[1.02] tracking-tight"
+            style={{ color: light ? accent : "#ffffff" }}
             initial={reduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.12, ease }}
@@ -213,7 +232,7 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
 
           {product.meaning ? (
             <motion.p
-              className="mt-3 max-w-lg text-sm text-white/45"
+              className={cn("mt-3 max-w-lg text-sm", soft)}
               initial={reduceMotion ? false : { opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.16, ease }}
@@ -223,7 +242,10 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
           ) : null}
 
           <motion.p
-            className="mt-5 max-w-md text-base leading-relaxed text-white/60 sm:text-lg"
+            className={cn(
+              "mt-5 max-w-md text-base leading-relaxed sm:text-lg",
+              body,
+            )}
             initial={reduceMotion ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.2, ease }}
@@ -263,7 +285,7 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
                 className="h-11 rounded-md px-6"
                 style={{
                   backgroundColor: accent,
-                  color: product.bg,
+                  color: ctaInk,
                 }}
               >
                 {product.cta.label}
@@ -275,7 +297,7 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
               render={<a href="#features" />}
               variant="outline"
               size="lg"
-              className="h-11 rounded-md border-white/20 bg-white/5 px-5 text-white hover:bg-white/10 hover:text-white"
+              className={outlineBtn}
             >
               See what it does
             </Button>
@@ -283,7 +305,7 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
         </div>
       </header>
 
-      <section id="features" className="relative border-t border-white/8">
+      <section id="features" className={cn("relative border-t", hairline)}>
         <div className="mx-auto w-full max-w-6xl px-5 py-24 sm:px-8 sm:py-28">
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, y: 18 }}
@@ -297,12 +319,20 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
             >
               {product.tag}
             </p>
-            <h2 className="mt-3 max-w-xl font-[family-name:var(--font-display)] text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold tracking-tight text-white">
+            <h2
+              className="mt-3 max-w-xl font-[family-name:var(--font-display)] text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold tracking-tight"
+              style={{ color: ink }}
+            >
               {product.description}
             </h2>
           </motion.div>
 
-          <ul className="mt-16 grid gap-0 border-t border-white/10 sm:grid-cols-3">
+          <ul
+            className={cn(
+              "mt-16 grid gap-0 border-t sm:grid-cols-3",
+              hairlineStrong,
+            )}
+          >
             {product.features.map((feature, index) => {
               const Icon = icons[feature.icon];
               return (
@@ -317,7 +347,8 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
                     ease,
                   }}
                   className={cn(
-                    "border-white/10 py-8 sm:px-6 sm:py-10",
+                    "py-8 sm:px-6 sm:py-10",
+                    hairlineStrong,
                     index > 0 && "border-t sm:border-t-0 sm:border-l",
                   )}
                 >
@@ -331,10 +362,13 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
                   >
                     <Icon className="size-5" strokeWidth={1.75} aria-hidden />
                   </span>
-                  <h3 className="mt-5 font-[family-name:var(--font-display)] text-lg font-semibold text-white">
+                  <h3
+                    className="mt-5 font-[family-name:var(--font-display)] text-lg font-semibold"
+                    style={{ color: ink }}
+                  >
                     {feature.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/55">
+                  <p className={cn("mt-2 text-sm leading-relaxed", muted)}>
                     {feature.detail}
                   </p>
                 </motion.li>
@@ -344,11 +378,11 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-t border-white/8">
+      <section className={cn("relative overflow-hidden border-t", hairline)}>
         <div
           className="pointer-events-none absolute inset-0"
           style={{
-            background: `radial-gradient(55% 70% at 50% 100%, rgba(${rgb},0.14), transparent 55%)`,
+            background: `radial-gradient(55% 70% at 50% 100%, rgba(${rgb},0.18), transparent 55%)`,
           }}
           aria-hidden
         />
@@ -365,10 +399,18 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
             >
               {product.closingEyebrow}
             </p>
-            <h2 className="mx-auto mt-3 max-w-2xl font-[family-name:var(--font-display)] text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold tracking-tight text-white">
+            <h2
+              className="mx-auto mt-3 max-w-2xl font-[family-name:var(--font-display)] text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold tracking-tight"
+              style={{ color: ink }}
+            >
               {product.closingTitle}
             </h2>
-            <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-white/55 sm:text-lg">
+            <p
+              className={cn(
+                "mx-auto mt-5 max-w-lg text-base leading-relaxed sm:text-lg",
+                muted,
+              )}
+            >
               {product.closingBody}
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -386,7 +428,7 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
                   className="h-11 rounded-md px-6"
                   style={{
                     backgroundColor: accent,
-                    color: product.bg,
+                    color: ctaInk,
                   }}
                 >
                   {product.cta.label}
@@ -398,7 +440,7 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
                 render={<a href={backHref} />}
                 variant="outline"
                 size="lg"
-                className="h-11 rounded-md border-white/20 bg-white/5 px-5 text-white hover:bg-white/10 hover:text-white"
+                className={outlineBtn}
               >
                 <ArrowLeft data-icon="inline-start" className="size-3.5" />
                 Back to {backLabel.toLowerCase()}
@@ -408,8 +450,8 @@ export function ProductLandingPage({ product }: ProductLandingPageProps) {
         </div>
       </section>
 
-      <footer className="mt-auto border-t border-white/8 py-10 text-center">
-        <p className="text-xs text-white/40">
+      <footer className={cn("mt-auto border-t py-10 text-center", hairline)}>
+        <p className={cn("text-xs", soft)}>
           ©2026 UgnAI Labs Co. · {product.name}
         </p>
       </footer>

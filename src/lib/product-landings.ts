@@ -39,6 +39,8 @@ export type ProductLanding = {
   accent: string;
   accentRgb: string;
   bg: string;
+  /** Light pages use dark ink; default is dark. */
+  tone?: "light" | "dark";
   section: "products" | "lab";
   statusLabel?: string;
   meaning?: string;
@@ -150,7 +152,8 @@ export const productLandings: ProductLanding[] = [
     wideImage: true,
     accent: "#c9a227",
     accentRgb: "201, 162, 39",
-    bg: "#0a0a0a",
+    bg: "#f5f0e6",
+    tone: "light",
     section: "products",
     cta: {
       label: "Open X Court Cebu",
