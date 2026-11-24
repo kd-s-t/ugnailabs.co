@@ -226,7 +226,7 @@ export const productLandings: ProductLanding[] = [
     accentRgb: "84, 184, 197",
     bg: "#070b12",
     section: "products",
-    statusLabel: "Paused",
+    statusLabel: "Still cooking",
     features: [
       {
         icon: "store",

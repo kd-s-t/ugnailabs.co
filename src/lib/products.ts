@@ -69,7 +69,7 @@ export const products: Product[] = [
     wideImage: true,
     users: 0,
     comingSoon: true,
-    statusLabel: "Paused",
+    statusLabel: "Still cooking",
     platforms: ["android", "web"],
   },
 ];
